@@ -1,0 +1,1 @@
+<?php include "layouts/_document_head.php" ?>
