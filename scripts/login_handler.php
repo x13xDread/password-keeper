@@ -1,12 +1,12 @@
 <?php
 include("../connections/db_connections.php");
-
+include("../connections/key.php");
 //variables
 $form_username = $form_password = "";
 $msg = "";
 
 //connection to db
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 //check connection
 if ($conn->connect_error) {
@@ -26,13 +26,15 @@ $result = $conn->query($sql);
 //check if username exists
 if ($result->num_rows > 0) {
     //output data of each row
-    while($row = $result->fetch_assoc()) {
-        if ($row["password"] === $form_password) {
+    while($row = $result->fetch_assoc()) {   
+        //decrypt row password with openssl
+        $decrypted_password = openssl_decrypt($row["password"], $method, $key);
+        if ($decrypted_password == $form_password) {
             $msg = "Login successful!";
             header("Location: ../pages/main.php");
             die();
         } else {
-            $msg = "Incorrect password!";
+            $msg =$decrypted_password;
             header("Location: ../pages/login_page.php?msg=" . $msg);
             die();
         }

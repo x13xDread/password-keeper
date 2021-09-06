@@ -1,6 +1,6 @@
 <?php    
 include("../connections/db_connections.php");
-
+include("../connections/key.php");
 //variables
 $form_username = $form_password = $form_confirm_password = "";
 $msg = "";
@@ -37,6 +37,8 @@ if ($form_password != $form_confirm_password) {
     header("Location: ../pages/register_page.php?msg=" . $msg);
     die();
 }
+//encrypt password with openssl
+$form_password = openssl_encrypt($form_password, $method, $key);
 
 //sql statement
 $sql = "INSERT INTO accounts (`username`, `password`) VALUES ('$form_username', '$form_password')";
