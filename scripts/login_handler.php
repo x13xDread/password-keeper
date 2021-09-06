@@ -34,7 +34,7 @@ if ($result->num_rows > 0) {
             header("Location: ../pages/main.php");
             die();
         } else {
-            $msg =$decrypted_password;
+            $msg = "Incorrect password!";
             header("Location: ../pages/login_page.php?msg=" . $msg);
             die();
         }
