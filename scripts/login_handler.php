@@ -30,7 +30,9 @@ if ($result->num_rows > 0) {
         //decrypt row password with openssl
         $decrypted_password = openssl_decrypt($row["password"], $method, $key);
         if ($decrypted_password == $form_password) {
+            session_start();
             $msg = "Login successful!";
+            $_SESSION["username"] = $form_username;
             header("Location: ../pages/main.php");
             die();
         } else {
