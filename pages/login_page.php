@@ -20,8 +20,9 @@
                 }
             ?>
             </p>
-            <button type="submit" class="btn btn-primary">Submit</button><br><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        <br><button class="btn btn-secondary" onclick="window.location.href='../index.php'">Cancel</button><br><br>
     </div>
 </body>
 </html>

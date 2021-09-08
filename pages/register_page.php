@@ -24,7 +24,9 @@
                 }
             ?>
             </p>
-            <button type="submit" class="btn btn-primary">Register</button>&nbsp;<a href="../index.php"><button class="btn btn-secondary">Cancel</button></a><br><br>
+            <button type="submit" class="btn btn-primary">Register</button><br>
+        </form>
+        <br><button class="btn btn-secondary" onclick="window.location.href='../index.php'">Cancel</button><br><br>
     </div>
 </body>
 </html>
