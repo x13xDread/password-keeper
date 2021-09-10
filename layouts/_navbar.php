@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">View Passwords</a>
+          <a class="nav-link" aria-current="page" href="../pages/main.php">View Passwords</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Add Password</a>
+          <a class="nav-link" href="../pages/add_password.php">Add Password</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../scripts/logout_handler.php">Logout</a>
