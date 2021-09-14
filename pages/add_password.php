@@ -4,6 +4,8 @@
 
 <div class="container mt-3">
     <!--add pasword form-->
+    <p class="text-success"><?php if(isset($_GET['msg'])){ echo $_GET['msg']; } ?></p>
+    <p class="text-danger"><?php if(isset($_GET['errormsg'])){ echo $_GET['errormsg']; } ?></p>
     <form action="../scripts/add_password.php" method="post">
         <!--account name-->
         <div class="form-group">

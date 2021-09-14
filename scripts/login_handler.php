@@ -33,6 +33,7 @@ if ($result->num_rows > 0) {
             session_start();
             $msg = "Login successful!";
             $_SESSION["username"] = $form_username;
+            $_SESSION["id"] = $row["id"];
             header("Location: ../pages/main.php");
             die();
         } else {
