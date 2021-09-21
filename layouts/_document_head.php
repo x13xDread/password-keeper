@@ -1,3 +1,16 @@
+<?php
+/*$cookie_options = array(
+    'expires' => time() + 60*60*24*30,
+    'path' => '/',
+    'domain' => '.domain.com', // leading dot for compatibility or use subdomain
+    'secure' => true, // or false
+    'httponly' => false, // or false
+    'samesite' => 'None' // None || Lax || Strict
+  );
+  
+  setcookie('cors-cookie', 'my-site-cookie', $cookie_options);*/
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +24,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
     <!--Include Data Tables-->
-    <link href="cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css" rel="stylesheet">
-    <script src ="cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>       
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+
     
 </head>
