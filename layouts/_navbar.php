@@ -20,7 +20,7 @@
             User Settings
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Change Password</a></li>
+            <li><a class="dropdown-item" href="../pages/change_password_page.php">Change Password</a></li>
             <li><a class="dropdown-item" href="#">Give Access to another User</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Delete Account</a></li>
